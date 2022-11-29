@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Address;
 import com.example.demo.model.Plan;
 import com.example.demo.model.PlanDto;
 import com.example.demo.model.ResponseDTO;
@@ -26,15 +25,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @RequestMapping("/clinic")
 public class Controller {
 
-	private PlanService service;
+	private PlanService servicetestgit;
 	private PlanRepo repo;
 	 @Autowired
 	    ObjectMapper mapper;
 
 
 	public Controller(PlanService service, PlanRepo repo) {
-		this.service = service;
+		this.servicetestgit = service;
 		this.repo = repo;
+		//ok
 	}
 	@GetMapping
 	public ResponseEntity<List<Plan>> list() {
@@ -55,7 +55,7 @@ public class Controller {
 	
 	@PostMapping
 	public ResponseEntity<ResponseDTO> save(@RequestBody PlanDto dto) throws Exception {
-		Plan plan_obj = service.savePlan(dto);
+		Plan plan_obj = servicetestgit.savePlan(dto);
 		return ResponseEntity.status(HttpStatus.CREATED).body(new ResponseDTO(plan_obj));
 			
 	}
