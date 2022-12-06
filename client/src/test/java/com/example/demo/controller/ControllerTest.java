@@ -73,6 +73,7 @@ class ControllerTest {
        PlanDto dto = new PlanDto();
 	   //testando git stash
        dto.setCpf("123456");
+	   //testando cherry pick
        dto.setDescription("consulta");
        dto.setTime("12:30");
        
