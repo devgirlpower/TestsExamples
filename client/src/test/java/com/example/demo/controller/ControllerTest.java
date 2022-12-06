@@ -71,6 +71,7 @@ class ControllerTest {
     void savePlanSucess() throws Exception {
 		//Git está me vendo -- agora estou modificado
        PlanDto dto = new PlanDto();
+	   //testando git stash
        dto.setCpf("123456");
        dto.setDescription("consulta");
        dto.setTime("12:30");
