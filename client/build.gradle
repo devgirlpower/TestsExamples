@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.7.5'
+	id 'org.springframework.boot' version '2.5.9'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 	id 'java'
    // id 'info.solidsoft.pitest' version '1.7.4'
@@ -22,7 +22,7 @@ ext {
 
 dependencies {
 	compileOnly("org.projectlombok:lombok:1.16.10")
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+//	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation("org.mock-server:mockserver-netty-no-dependencies:5.14.0")
@@ -39,7 +39,7 @@ dependencies {
 	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
 	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
 	implementation 'io.springfox:springfox-swagger2:3.0.0'
-
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.12'
 
 	implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.6.0'
 	//implementation 'org.seleniumhq.selenium:selenium-chrome-driver:2.23.0'
@@ -50,7 +50,12 @@ testImplementation 'junit:junit:4.4'
 	//implementation 'org.mock-server:mockserver-client-java:3.10.8'
 	testImplementation("org.mock-server:mockserver-client-java-no-dependencies:5.14.0")
 	implementation 'de.codecentric:spring-boot-admin-starter-client'
-	runtimeOnly 'com.mysql:mysql-connector-j'
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+//	implementation 'mysql:mysql-connector-java:5.1.13'
+// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	implementation 'mysql:mysql-connector-java:8.0.31'
+
+	//runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 //	testCompile 'org.seleniumhq.selenium:selenium-chrome-driver:2.53.1'
 
